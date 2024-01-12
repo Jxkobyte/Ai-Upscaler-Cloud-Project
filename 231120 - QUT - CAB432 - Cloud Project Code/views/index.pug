@@ -1,0 +1,59 @@
+extends layout
+
+block content
+
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  
+  .hero
+    .hero-text
+      h1 AI Image Upscaler
+      p Welcome to the AI Image Upscaler - a state-of-the-art solution for enhancing the resolution of your images using advanced Tensorflow models powered by UpscalerJS.
+      p Simply upload your image and let our system process and upscale it with the power of AI. Choose from 2x, 4x, or 8x upscaling options to suit your needs.
+    
+    .hero-form
+      form(action="/upload" method="post" enctype="multipart/form-data")
+        label(for="imageUpload") Select an Image to Upscale:
+        input(type="file" name="image" id="imageUpload" required)
+        label(for="upscalingOption") Choose Upscaling Factor:
+        select(name="upscalingOption" id="upscalingOption")
+          option(value="x2") 2x
+          option(value="x3") 3x
+          option(value="x4") 4x
+        // Option ignoreCache is used to bypass the cache and force the image to be upscaled again. Should be a tickbox.
+        label(for="ignoreCache") Ignore Cache:
+        input(type="checkbox" name="ignoreCache" id="ignoreCache")
+        button(type="submit") Upscale Image
+
+
+  .format
+    .wrapper
+      .images
+        .img-1
+        .img-2
+      .slider
+        .drag-line
+          span
+        input(type="range" min="0" max="100" value="50")
+    .before
+      h2 Original
+    .after 
+      h2 4x Upscaled
+  
+    hr
+
+    .info-section
+      h2 Technology Stack
+      ul
+        li <a href="https://upscalerjs.com" target="_blank">UpscalerJS</a>: Our core upscaling library.
+        li <a href="https://aws.amazon.com/elasticloadbalancing/" target="_blank">AWS Load balancer</a>: Ensuring smooth traffic management.
+        li <a href="https://redio.io" target="_blank">Redis cache (Managed Service)</a>: For optimized caching and faster performance.
+        li <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>: Providing a seamless and responsive user interface.
+
+  div.footer
+    p
+      | Made with
+      span(style="color: red;") ❤️
+      | by Jacob Fallows and Rhys Boyd
+
+
+  script(src="scripts/comparison.js")

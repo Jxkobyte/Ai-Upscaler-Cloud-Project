@@ -1,0 +1,26 @@
+Jxkobyte (8):
+      Home page styling
+      package
+      Merge branch 'main' of github.com:RhysB/CAB432-Cloud-Project
+      Add Styling
+      bug fix
+      Edit styling
+      Update results page
+      Merge branch 'main' of github.com:RhysB/CAB432-Cloud-Project
+
+RhysB (13):
+      Initial commit
+      Express with Jade (Can be changed)
+      Some bits and pieces
+      Basic homepage and some backend for upscales
+      Convert images to JPEG to ensure the upscale works
+      Offloading of upscaling to another worker thread
+      Uploading of original, upscaled, and info to S3
+      Fetch images from S3 alongside results API
+      Loading and results page
+      Add Redis Support
+      Use .env bucket name instead of hardcode
+      S3 Version
+      Final code
+
+

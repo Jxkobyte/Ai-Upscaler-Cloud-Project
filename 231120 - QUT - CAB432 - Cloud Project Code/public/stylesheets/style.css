@@ -1,0 +1,247 @@
+html {
+  background-color: #c5caf0;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  max-width: 1920px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.hero {
+  display: flex;
+  background-color: #4f5ab7;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  color:aliceblue;
+}
+
+.hero-text {
+  margin-right:65px;
+  
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  
+  font-weight: extra-bold;
+  margin-bottom: 5px;
+}
+
+.hero-text p {
+  
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+  background-color: #4f5ab7;
+  color: white;
+}
+
+.format {
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  box-sizing: border-box;
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background-color: #3a448e;
+}
+
+.wrapper{
+  position: relative;
+  height: 500px;
+  width: 750px;
+  overflow: hidden;
+  background: #fff;
+  border: 7px solid #fff;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+}
+
+.wrapper .images{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.wrapper .images .img-1{
+  height: 100%;
+  width: 100%;
+  background: url("/images/peter-vanosdall-uZVtAixV8c8-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px;
+}
+
+.wrapper .images .img-2{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  filter: blur(0.8px);
+  background: url("/images/peter-vanosdall-uZVtAixV8c8-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px;
+}
+
+.wrapper .slider{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.wrapper .slider input{
+  width: 100%;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+}
+.slider input::-webkit-slider-thumb{
+  height: 500px;
+  width: 3px;
+  background: none;
+  -webkit-appearance: none;
+  cursor: col-resize;
+}
+.slider .drag-line{
+  width: 3px;
+  height: 500px;
+  position: absolute;
+  left: 49.85%;
+  pointer-events: none;
+}
+.slider .drag-line::before,
+.slider .drag-line::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 250px;
+  background: #fff;
+}
+.slider .drag-line::before{
+  top: 0;
+}
+.slider .drag-line::after{
+  bottom: 0;
+}
+.slider .drag-line span{
+  height: 42px;
+  width: 42px;
+  border: 3px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider .drag-line span::before,
+.slider .drag-line span::after{
+  position: absolute;
+  content: "";
+  top: 50%;
+  border: 10px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.slider .drag-line span::before{
+  left: 40%;
+  border-left-color: #fff;
+}
+.slider .drag-line span::after{
+  left: 60%;
+  border-top-color: #fff;
+}
+
+.info-section {
+  padding-bottom: 25px;
+  color: aliceblue;
+}
+
+.info-section h2 {
+  font-weight: bold;
+}
+
+.before {
+  position: absolute;
+  align-self: flex-start;
+  padding-right: 650px;
+}
+
+.before h2, .after h2 {
+  font-size: 16px;
+  color: white;
+  padding-top: 20px;
+}
+
+.after {
+  position: absolute;
+  align-self: flex-start;
+  padding-left: 630px;
+}
+
+label, input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.hero-form {
+  max-width: 327px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #3a448e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+.hero-form input,
+.hero-form select,
+.hero-form button {
+  margin-bottom: 16px;
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: #3a448e;
+  color: #fff;
+}
+
+input[type="file"] {
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  background-color: #3a448e;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1f266a;
+}
